@@ -13,44 +13,51 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 public class Employee {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name="first_name")
+	@Column(name = "first_name")
 	private String firstname;
-	@Column(name="last_name")
+	@Column(name = "last_name")
 	private String lastname;
-	@Column(name="email_id",nullable = false,unique = true )
+	@Column(name = "email_id", nullable = false, unique = true)
 	private String email;
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getFirstname() {
 		return firstname;
 	}
+
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
+
 	public String getLastname() {
 		return lastname;
 	}
+
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public Employee(Long id, String firstname, String lastname, String email) {
 		super();
 		this.id = id;
@@ -58,9 +65,10 @@ public class Employee {
 		this.lastname = lastname;
 		this.email = email;
 	}
+
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
 }
